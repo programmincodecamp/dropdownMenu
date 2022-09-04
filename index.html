@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DropDown Menu</title>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="image/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">course</a></li>
+                <li><a href="#">Online Course</a></li>
+            </ul>
+            <img src="image/user.jpg" class="user-pic" onclick="toggleMenu()">
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="image/user.jpg">
+                        <h3>Profile</h3>
+                    </div>
+                    <a href="#" class="sub-menu-link">
+                        <img src="image/">
+                        <h2>SignIn</h2>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="image/">
+                        <h2>SignUp</h2>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="image/">
+                        <h2>LogOut</h2>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <header>
+        <div class="switch">
+            <div class="flicker"></div>
+            <div class="moon"></div>
+            <div class="dark"></div>
+        </div>
+    </header>
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu")
+        }
+    </script>
+
+    <script class="scripts.js">
+        const switchElement = document.querySelector('.switch')
+  
+        switchElement.addEventListener('click', () => {
+        document.body.classList.toggle('dark')
+        })
+    </script>
+</body>
+</html>
